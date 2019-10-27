@@ -3,6 +3,7 @@
 ### Example user template
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+hibernate.cfg.xml
 
 ### STS ###
 .apt_generated

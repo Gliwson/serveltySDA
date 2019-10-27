@@ -2,7 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Sda Twitter: home page</title>
+    <jsp:include page="include/meta.jsp"/>
+    <title>Login</title>
 </head>
 
 <body>
@@ -99,4 +100,5 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
