@@ -7,6 +7,7 @@
     <groupId>sda.pl</groupId>
     <artifactId>serveltySDA</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <project.java.version>1.12</project.java.version>
