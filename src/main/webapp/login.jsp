@@ -4,7 +4,6 @@
 <head>
     <jsp:include page="/include/meta.jsp"/>
     <title>Login</title>
-    <link href="${pageContext.request.contextPath}/css/sign-in.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +22,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 </main>
-<footer class="footer-add">
+<footer>
     <jsp:include page="/include/footer.jsp"/>
 </footer>
 </body>

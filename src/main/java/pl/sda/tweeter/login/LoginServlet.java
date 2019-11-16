@@ -16,13 +16,13 @@ public class LoginServlet extends HttpServlet {
     private UserService userService = new UserService();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request
+            , HttpServletResponse response) throws IOException {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         TbUser tbUser = null;
         try {
             tbUser = userService.getTbUser(login, password);
-            userService.getTbUser(login, password);
         } catch (IncorrectLoginOrPassword e) {
             e.printStackTrace();
             response.sendRedirect("login.jsp");
