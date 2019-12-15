@@ -1,10 +1,12 @@
-package pl.sda.tweeter.persistance.entities;
+package pl.sda.entities;
 
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import pl.sda.entities.dao.UserDao;
+import tweeter.exception.IncorrectLoginOrPassword;
 
-import static pl.sda.tweeter.util.EnvironmentVariableUtil.getVariable;
+import static pl.sda.entities.util.EnvironmentVariableUtil.getVariable;
 
 public class HibernateUtil {
 
@@ -15,15 +17,6 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-//            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-//                    .configure("hibernate.cfg.xml")
-//                    .build();
-//            Metadata metadata = new MetadataSources(serviceRegistry)
-//                    .getMetadataBuilder()
-//                    .build();
-//            SessionFactory factory = new Configuration()
-//                    .configure("hibernate.cfg.xml")
-//                    .buildSessionFactory();
 
             return new Configuration()
                     .setProperty(USERNAME, getVariable(USERNAME))
@@ -46,4 +39,12 @@ public class HibernateUtil {
     }
 
 
+    public static class UserService {
+        private UserDao userDao = new UserDao();
+
+        public TbUser getTbUser(String login, String password) throws IncorrectLoginOrPassword {
+            TbUser userByLogin;
+
+        }
+    }
 }

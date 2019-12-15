@@ -1,4 +1,4 @@
-package pl.sda.tweeter.exception;
+package tweeter.exception;
 
 public class IncorrectLoginOrPassword extends Exception {
     public IncorrectLoginOrPassword(String message) {

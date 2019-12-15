@@ -1,4 +1,4 @@
-package pl.sda.tweeter.persistance.entities;
+package pl.sda.entities;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

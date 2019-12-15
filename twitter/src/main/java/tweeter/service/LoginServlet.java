@@ -1,8 +1,8 @@
-package pl.sda.tweeter.login;
+package tweeter.service;
 
-import pl.sda.tweeter.exception.IncorrectLoginOrPassword;
-import pl.sda.tweeter.persistance.entities.TbUser;
-import pl.sda.tweeter.service.UserService;
+import pl.sda.entities.HibernateUtil;
+import pl.sda.entities.TbUser;
+import tweeter.exception.IncorrectLoginOrPassword;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
-    private UserService userService = new UserService();
+    private HibernateUtil.UserService userService = new HibernateUtil.UserService();
 
     @Override
     public void doPost(HttpServletRequest request

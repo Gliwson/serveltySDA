@@ -1,4 +1,4 @@
-package pl.sda.tweeter.util;
+package pl.sda.entities.util;
 
 public class EnvironmentVariableUtil {
     public static String getVariable(String key) {
